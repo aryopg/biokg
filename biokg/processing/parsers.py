@@ -1688,7 +1688,7 @@ class ReactomeParser:
             for line in mappings_fd:
                 parts = line.strip().split('\t')
                 
-                if 'generated-by: ' in parts[0] or 'date-generated: ' in parts[0]:
+                if 'generated-by: ' in parts[0] or 'date-generated: ' in parts[0] or 'Project-release' in parts[0]:
                     continue
 
                 org = parts[12].split(':')[1]
