@@ -590,7 +590,7 @@ class HumanProteinAtlasParser:
         start = timer()
         nb_entries = 0
         for event, entry in ET.iterparse(xml_fd, events=('start', 'end')):
-            if entry.tag == "entry" and event == "end" and len(entry.getchildren()) > 2:
+            if entry.tag == "entry" and event == "end" and len(list(entry)) > 2:
                 nb_entries += 1
                 if nb_entries % 5 == 0:
                     speed = nb_entries / (timer() - start)
