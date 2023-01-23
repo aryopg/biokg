@@ -3,3 +3,4 @@ pyOpenSSL
 pandas
 xlrd
 biodblinker
+openpyxl
